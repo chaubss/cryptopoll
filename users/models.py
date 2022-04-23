@@ -8,7 +8,6 @@ from .managers import UserManager
 
 class User(AbstractUser):
     username = None
-    name = models.CharField(max_length=255)
     email = models.EmailField('email address', unique=True)
     password = models.CharField(max_length=255)
 
@@ -21,6 +20,10 @@ class User(AbstractUser):
         choices=Role.choices,
         default=Role.USER,
     )
+
+    @property
+    def full_name(self):
+        return self.first_name+' '+self.last_name
 
 
     USERNAME_FIELD = 'email'

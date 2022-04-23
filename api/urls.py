@@ -5,4 +5,5 @@ urlpatterns = [
     path('auth/', include('authentication.urls')),
     path('poll/', include('poll.urls')),
     path('miner/', include('miner.urls')),
+    path('block/', include('block.urls')),
 ]
