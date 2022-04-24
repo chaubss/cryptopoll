@@ -10,6 +10,7 @@ django-cors-headers = "*"
 djangorestframework-simplejwt = "*"
 dj-rest-auth = "*"
 django-allauth = "*"
+google-api-python-client = "*"
 
 [dev-packages]
 
