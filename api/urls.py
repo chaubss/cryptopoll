@@ -6,4 +6,5 @@ urlpatterns = [
     path('poll/', include('poll.urls')),
     path('miner/', include('miner.urls')),
     path('block/', include('block.urls')),
+    path('zkp/', include('zkp.urls')),
 ]

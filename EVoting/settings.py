@@ -57,7 +57,8 @@ INSTALLED_APPS = [
     'poll',
     'vote',
     'block',
-    'blockchain'
+    'blockchain',
+    'zkp',
 ]
 
 SITE_ID = 1
