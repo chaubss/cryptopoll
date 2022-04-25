@@ -33,12 +33,12 @@ def create_poll(request):
         return Response(status=400)
 
 @api_view(['GET'])
-@permission_classes((IsAuthenticated, IsRoleUserOrAdmin))
+# @permission_classes((IsAuthenticated, IsRoleUserOrAdmin))
 def get_polls(request):
     try:
         polls = Poll.objects.all()
         serializer = PollSerializer(polls, many=True)
-        return Response(status=200, data = serializer.data)
+        return Response(status=200, data = {'polls': serializer.data})
     except:
         return Response(status=400)
 
