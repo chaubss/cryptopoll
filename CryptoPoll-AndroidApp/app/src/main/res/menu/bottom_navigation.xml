@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/ic_home"
+        android:title="Home"
+        android:id="@+id/nav_home" />
+    <item
+        android:icon="@drawable/ic_blocks"
+        android:title="Blocks"
+        android:id="@+id/nav_blockchain" />
+
+    <item
+        android:title="My Votes"
+        android:id="@+id/nav_my_votes"
+        android:icon="@drawable/ic_my_votes"
+        />
+
+
+</menu>
