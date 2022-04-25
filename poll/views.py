@@ -55,8 +55,8 @@ def cast_vote(request):
                 raise Exception('Date is not within the poll start and end date')
             choice.votes += 1
             choice.save()
-            Blockchain.add_vote_to_block(request.user, choice)
-            return Response(status=201)
+            vote = Blockchain.add_vote_to_block(request.user, choice)
+            return Response(status=201, data={'vote_id': vote.id})
     except IntegrityError:
         return Response(status=400, data={'message': 'You have already voted'})
     except Exception as e:

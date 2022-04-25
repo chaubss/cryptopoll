@@ -40,5 +40,6 @@ class Blockchain:
                 poll=choice.poll,
                 block=last_block
             )
+            return vote
         except Exception as e:
             raise e
