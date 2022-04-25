@@ -33,7 +33,7 @@ def create_poll(request):
         return Response(status=400)
 
 @api_view(['GET'])
-# @permission_classes((IsAuthenticated, IsRoleUserOrAdmin))
+@permission_classes((IsAuthenticated, IsRoleUserOrAdmin))
 def get_polls(request):
     try:
         polls = Poll.objects.all()
