@@ -13,7 +13,7 @@ from .serializers import PollSerializer
 
 # Create your views here.
 @api_view(['POST'])
-@permission_classes((IsAuthenticated, IsRoleAdmin))
+@permission_classes((IsAuthenticated, IsRoleUserOrAdmin))
 def create_poll(request):
     try:
         with transaction.atomic():
@@ -44,7 +44,7 @@ def get_polls(request):
 
  
 @api_view(['POST'])
-@permission_classes((IsAuthenticated, IsRoleUser))
+@permission_classes((IsAuthenticated, IsRoleUserOrAdmin))
 def cast_vote(request):
     try:
         with transaction.atomic():

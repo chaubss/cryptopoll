@@ -17,6 +17,7 @@ class GoogleOAuth2AdapterIdToken(GoogleOAuth2Adapter):
         if idinfo['iss'] not in ['accounts.google.com', 'https://accounts.google.com']:
             raise ValueError('Wrong issuer.')
         extra_data = idinfo
+        print(extra_data)
         login = self.get_provider() \
             .sociallogin_from_response(request,
                                        extra_data)
